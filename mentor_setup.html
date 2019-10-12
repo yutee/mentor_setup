@@ -7,7 +7,6 @@
   <title>Mentor Account Setup</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -493,8 +492,15 @@
                     border-radius: 4%;
                     background-color: #00AEFF;
                 }
-                .navbar {
-                    color: #474747;
+                #nav {
+                    background-color: #D1F0F6 !important;
+                    color: #474747 !important;
+                    font-weight: bold;
+                }
+
+                .navbar-toggler {
+                    border: none !important;
+                    outline: none !important;
                 }
             
                 header {
@@ -544,7 +550,7 @@
             }
             /*New Responsive navbar ends*/
 
-/*New Responsive code starts here"/
+/*New Responsive code starts here"*/
 @media screen and (max-width: 970px){
        .form-check-label{
            width:40%;
@@ -578,53 +584,34 @@
     <div class="headerContainer">
   <!--Header - navbar-->
    <section class="box1">
-   <!-- <header class="header">
-       <nav>
-           <div class="logoImg">
-               <div>
-                   <img src="https://res.cloudinary.com/yutee/image/upload/v1570670418/brand-logo_awykcz.png" alt="HNGLogo">
-               </div>
-           </div>
-           <div class="anch">
-               <a class="Home" href="index.html">Home</a>
-               <a class="HNG" href="hng6.html">HNG6</a>
-        <a class="Mentors" href="mentoraccount1.html">Mentors</a>
-               <a class="Contact" href="contact.html">Contact</a>
-               <a class="itembutton" href="joinhng.html" class="ButtonText">Join HNG</a>
-           </div>
-       </nav>
-   </header> -->
-   <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Main navigation">
-                    <a class="navbar-brand text-dark" href="#">
-                        <img src="https://res.cloudinary.com/yutee/image/upload/v1570670418/brand-logo_awykcz.png" alt="HNG Logo" class="logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars fa-lg"></i>
-                    </button>
-                    <div class="collapse navbar-collapse navbar-right" id="navbarNav">
-                        <ul class="navbar-nav align-items-lg-center text-uppercase pt-3 pt-lg-0 ml-auto">
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="#" style="text-transform:uppercase;">HNG6</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="#">Mentors</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                            <li class="nav-item join mr-3">
-                                <a class="nav-link " style="color: white;" href="#">Join HNG</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav> 
-            </div> 
-        </header>
-  <!-- end of NAV BAR DON'T EDIT -->
+  
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+      <a class="navbar-brand" href="#">
+        <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">HNG6</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Mentors</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+          </li>z
+  
+          <button class="btn btn-primary">Join HNG</button>
+        </ul>
+      </div>
+    </nav>
    <div>
            <p class="pagetitle">
                Mentor Account Set Up
