@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentor Account Setup</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <script> 
+        $(function(){
+          $("#footer").load("footer.html"); 
+        });
+    </script>
+
+    <style>
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+      #nav {
+      background-color: #D1F0F6 !important;
+      color: #474747 !important;
+      font-weight: bold;
+     }
+
+     .navbar-toggler {
+       border: none !important;
+       outline: none !important;
+     }
+
+     .navbar-toggler-icon {
+      border-radius: none;
+      box-shadow: none;
+    }
+
+    .nav-item {
+      float: right;
+    }
+
+     header {
+      background-color: #D1F0F6 !important;
+     }
+
+     .pagetitle {
+       text-align: center;
+       padding-top: 150px;
+       color: #084482;
+     }
+
+     .pagetitletagline {
+       text-align: center;
+       padding-top: 15px;
+       padding-bottom: 60px;
+     }
+
+     .formcontent {
+       padding-top: 60px;
+     }
+
+     .headerContainer {
+     background-color: #D1F0F6 !important;
+     text-align: center;
+     }
+
+ .cont {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  padding-left: 2%;
+}
+
+/* On mouse-over, add a grey background color */
+.cont:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cont input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cont input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cont .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+
+}
+
+.content{
+        background-color:#f4f5f7;
+        padding-left: 9%;
+        
+    }
+    .formcontent{
+        background-color:rgba(255,255,255,0);
+    }
+    .inner{
+        background-color:#ffffff;
+        
+    }
+    .inner1{
+        padding: 30px 0px;
+    }
+    .form-check label{
+        width:20%;
+        padding-left: 2% !important;
+    }
+    .form-control{
+        margin-bottom:10px;
+    }
+    .none{
+        display: none !important;
+    }
+    .attach{
+        display: block!important;
+    }
+    .attach img{
+        display: block!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .submitform{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .icon.ion-ios-arrow-down {
+        float:right;
+        color:#00AEFF;
+    }
+    #align-exp {
+      align-content: center !important;
+      margin-right: 20%;
+      padding-right: 20%;
+    }
+    .form-check-label {
+      font-weight: lighter !important;
+    }
+
+
+    footer {
+         text-align: left;
+         background: #F8F8F8;
+         box-sizing: border-box;
+     }
+     
+     .footer-brand {
+         margin-left: -2.2rem;
+     }
+     
+     #sections {
+         display: flex;
+         justify-content: space-evenly;
+         text-align: left;
+     }
+     
+     #bottom {
+         text-align: center;
+     }
+     
+     #section-one,
+     #section-two,
+     #section-three,
+     #section-four {
+         padding: 0 1rem;
+     }
+
+     footer h4 {
+         color: #3BB9FF;
+     }
+
+     
+
+     @media (min-width: 700px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .collapse {
+        display: flex;
+        justify-content:flex-end;
+      }
+      
+     #landing-page {
+         min-height: 55vh;
+     }
+
+      li {
+        padding: 0 1.5rem;
+      }
+
+      ul {
+        margin-right: 3rem;
+      }
+    }
+    
+  /*  .land {
+        bottom: 6rem;
+    }*/
+
+    @media (min-width: 1000px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      li {
+        padding: 0 1.5rem;
+      }
+
+      ul {
+        margin-right: 3rem;
+      }
+
+      .collapse {
+        display: flex;
+        justify-content:flex-end;
+      }
+   
+     
+     footer {
+         text-align: left;
+     }
+     
+     .footer-brand {
+         margin-left: -2.2rem;
+     }
+     
+     #sections {
+         display: flex;
+         justify-content: space-evenly;
+         text-align: left;
+     }
+     
+     #bottom {
+         text-align: center;
+         padding-top: 40px;
+         color: #8898AA;
+     }
+     
+     #section-one,
+     #section-two,
+     #section-three,
+     #section-four {
+         padding: 0 1rem;
+     }
+
+     #section-two p,
+     #section-three p {
+       color: #8898AA;
+     }
+
+     .footer-brand {
+       padding: 40px;
+       margin-left: 40px;
+     }
+
+    }
+     
+
+    </style>
+</head>
+<body>
+  <div class="headerContainer">
+<!--Header - navbar-->
+ <section class="box1">
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+    <a class="navbar-brand" href="#">
+      <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">HNG6</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Mentors</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+        </li>
+
+        <button class="btn btn-primary">Join HNG</button>
+      </ul>
+    </div>
+  </nav>
+ <div>
+         <h2 class="pagetitle">
+             Mentor Account Set Up</h2>
+         <div class="pagetitletagline">
+             <div>Thanks for your interest in becoming a HNG mentor.</div>
+             <div>Kindly fill out this form.</div>
+         </div>
+ </div>
+ </section>
+</div> 
+</header>
+
+<!-- Choose area of expertise -->
+<div class = "container-fluid" id = "align-exp">
+  <div class="content">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 formcontent">
+                  <h3 class="text-center">Choose an area of expertise</h3>
+                  <div class="inner">
+                      
+                  <label class="cont form-check-label">Frontend Development
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></i></span>
+                  </label>
+                  
+                  <label class="cont form-check-label">Backend Development
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="cont form-check-label">Machine Learning
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="cont form-check-label">UX/UI Design
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="cont form-check-label">Mobile Development
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="cont form-check-label">Digital Marketing
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                      </div>
+                  </div>
+                  <div class="col-md-12 inner1">
+                      <label for="file-input" class="attach">
+                          <img src="https://res.cloudinary.com/onamusia/image/upload/v1570664123/hng%20website/Group_96_zxm5gs.png">
+                      </label>
+                      <input class="none" id="file-input" type="file"/>
+                      <p class="text-center">Click the image above to upload a profile photo</p>
+                      <p class="text-center">JPG or PNG. Max size of 400k</p> <br>
+                      <form>
+                          <input class="form-control" type="text" placeholder="Name">
+                          <input class="form-control" type="text" placeholder="Email" inputmode="email">
+                          <input class="form-control" type="text" placeholder="Phone Number" inputmode="tel">
+                          <input class="form-control" type="text" placeholder="What do you do?">
+                          <input class="form-control" type="url" placeholder="Link to your portfolio">
+                          <input class="form-control" type="url" placeholder="Link to your LinkedIn profile">
+                          <input class="form-control" type="url" placeholder="Link to your CV">
+                          <input class="form-control" type="text" placeholder="Why are interested in mentoring with HNG?">
+                          <input class="form-control" type="text" placeholder="What state are you currently located in?">
+                          <input class="form-control" type="text" placeholder="What is your current employment status?"> <br>
+                          <button class="btn btn-primary submitform" type="submit"> Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<footer>
+  <div id="footer">
+      <div class="footer-brand">
+          <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
+      </div>
+      <div id="sections">
+      <section id="section-one">
+          <h4 class="blue">Quick Links</h4>
+          <br>
+          <ul class="blue" class="ul">
+             <li>
+                 <a href="#">Join HNG</a>
+             </li>
+             <li>
+                 <a href="#">About HNG</a>
+             </li>
+             <li>
+                 <a href="#">Become a Sponsor</a>
+             </li>
+             <li>
+                 <a href="#">Signup as a Mentor</a>
+             </li>
+          </ul>
+      </section>
+      <section id="section-two">
+          <h4>Contact Us</h4>
+          <br>
+          <p>Phone</p>
+          <p>+234 (0) 812 345 6789</p>
+          <p>Email</p>
+          <p>interns@hng.tech</p>
+      </section>
+      <section id="section-three">
+          <h4>Office Address</h4>
+          <br>
+          <p>3 Birrel Avenue</p>
+          <p>Sabo Yaba,</p>
+          <p>Lagos State</p>
+      </section>
+      <section id="section-four">
+          <h4>Follow Us</h4>
+          <br>
+          <div class="bottom-icons">
+              <span>
+                  <a href="#">
+                    <img src="https://res.cloudinary.com/romoke1/image/upload/v1570797920/vajvf9fwvyaxktxkydkc.png">
+                  </a>
+              </span>
+              
+              <span>
+                  <a href="#">
+                    <img src="https://slack-redir.net/link?url=https%3A%2F%2Fres.cloudinary.com%2Fromoke1%2Fimage%2Fupload%2Fv1570797940%2Fckn7kctblqj9uetwfaab.png">
+                  </a>
+              </span>
+              
+              <span>
+                  <a href="#">
+                    <img src="https://res.cloudinary.com/ladydondammy/image/upload/v1570818150/dribble_tddxag.png">
+                  </a>
+              </span>
+          </div>
+      </section>
+      </div>
+
+      <p id="bottom">
+          &copy; 2019, HNG Internship All rights reserved.
+      </p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
