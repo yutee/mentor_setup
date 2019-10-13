@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Mentor Setup Page</title>
 
@@ -61,10 +63,13 @@
         padding-bottom: 3%;
       }
       #checkbox-container {
-        height: 400px;
+        height: 550px;
         background-color: #FFFFFF;
         padding-top: 3%;
         padding-left: 2%;
+      }
+      #toggleText , #toggleText1 , #toggleText2 , #toggleText3 , #toggleText4 , #toggleText5 {
+        display: none;
       }
       /*New checkbox*/
       /* The container */
@@ -160,6 +165,16 @@
       #file-input {
         display: none;
       }
+      #quicklink-text {
+        font-weight: 600;
+        font-size: 23px;
+        color: #00AEFF;
+        padding-top: -2%;
+      }
+      #footer-section {
+       background-color: #FAFAFA;
+       height: 450px;
+      }
     </style>
   </head>
   <body>
@@ -194,43 +209,61 @@
         <label class="cont form-check-label label-text">Frontend Development
           <input type="checkbox" checked="checked">
             <span class="checkmark"><i class="icon ion-ios-arrow-down"></i></span>
-            <span>></span> <!-- For Arrow -->
+            <span><button type="" onclick="toggleFun()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
         </label>
-        <span style = "padding-bottom: 1%; font-size: 14px:">Preferred skills: HTML, CSS, Javascript, Boostrap, JQuery</span>
+        <span id = "toggleText" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills: HTML, CSS, Javascript, Boostrap, JQuery</span>
         <br>
         <label class="cont form-check-label label-text">Backend Development
             <input type="checkbox">
             <span class="checkmark"></span>
-            <span>></span> <!-- For Arrow -->
+            <span><button type="" onclick="toggleFun1()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
         </label>
-        <span style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <span id = "toggleText1" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
         <br>
         <label class="cont form-check-label label-text">Machine Learning
             <input type="checkbox">
             <span class="checkmark"></span>
-            <span>></span> <!-- For Arrow -->
+            <span><button type="" onclick="toggleFun2()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
         </label>
-        <span style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <span id = "toggleText2" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
         <br>
         <label class="cont form-check-label label-text">UX/UI Design
             <input type="checkbox">
             <span class="checkmark"></span>
-            <span>></span> <!-- For Arrow -->
+            <span><button type="" onclick="toggleFun3()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button></span> <!-- For Arrow -->
         </label>
-        <span style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <span id = "toggleText3" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
         <br>
         <label class="cont form-check-label label-text">Mobile Development
             <input type="checkbox">
             <span class="checkmark"></span>
-            <span>></span> <!-- For Arrow -->
+            <span><button type="" onclick="toggleFun4()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
         </label>
-        <span style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <span id = "toggleText4" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
         <br>
         <label class="cont form-check-label label-text">Digital Marketing
             <input type="checkbox">
             <span class="checkmark"></span>
+            <span><button type="" onclick="toggleFun5()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
         </label>
-        <span style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <span id = "toggleText5" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
         <br>
       </div> <!-- Checkbox -->
     </div> <!-- Area of expertise -->
@@ -261,17 +294,156 @@
         </form>
       </div>
     </div> <!-- Form input field -->
-    <div>
-      <div>
-        
+    <br> <br> <br> <br> <br>
+    <div id = "footer-section">
+      <div class="container">
+        <!-- Footer -->
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+          <div class="container text-center text-md-left">
+            <a class="navbar-brand text-dark" href="#">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570670418/brand-logo_awykcz.png" alt="HNG Internship" class="logo">
+            </a>
+          <div class="row">
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+              <div class="font-weight-bold mb-4" id = "quicklink-text">Quick Links</div>
+              <ul class="list-unstyled">
+                <li>
+                  <p>
+                    <a style="color: #00AEFF;" href="#">Join HNG</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#">About HNG</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#">Become a Sponsor</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#">Signup as a mentor</a>
+                  </p>
+                </li>
+              </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <h5 class="font-weight-bold  mb-4">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <p>Phone: </p>
+              </li>
+              <li>
+                <p>+234 (0) 812 345 6789</p>
+              </li>
+              <li>
+                <p>Email:</p>
+                  <li>
+                      <p>interns@hng.tech</p>
+                    </li>
+                    
+              </li>
+              
+            </ul>
+  
+          </div>
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+              <h5 class="font-weight-bold  mb-4">Office Address</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <p>3 Birrel Avenue</p>
+                </li>
+                <li>
+                  <p>Sabo,Yaba,</p>
+                </li>
+                <li>
+                  <p>Lagos State</p>
+                </li>
+              </ul>
+            </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+            <h5 class="font-weight-bold mb-4">Follow Us</h5>
+            <a href="https://twitter.com">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922278/TWITTERtw_icon_zthsdk.png" alt="Twitter Logo" class = "justify-content-between" style="height:20px;">
+            </a>
+            <a href="https://facebook.com">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922278/FACEBOOKfb_cfxqru.png" alt="Facebook Logo" class = "justify-content-between" style="height:20px;">
+            </a>
+            <a href="https://dribble.com">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/DRIBBBLEdr_ws61rj.png"  alt = "Dribble Logo" class = "justify-content-between" style="height:20px;">
+            </a>
+          </div>
+          </div>
+          </div>
+          <div class="footer-copyright text-center py-3" style="color: #8898AA;">© 2018 Copyright:
+            <span style="color: #8898AA;"> HNG Internship. All rights reserved.</span>
+          </div>
+        </footer>
         <!-- Footer here -->
       </div>
-    </div> <!-- Wrap footer here -->
+    </div> <!-- Footer Container -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Toggle checkbox options script -->
+    <script>
+      function toggleFun() {
+        var x = document.getElementById("toggleText");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun1() {
+        var x = document.getElementById("toggleText1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun2() {
+        var x = document.getElementById("toggleText2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun3() {
+        var x = document.getElementById("toggleText3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun4() {
+        var x = document.getElementById("toggleText4");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun5() {
+        var x = document.getElementById("toggleText5");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
