@@ -1,761 +1,456 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentor Account Setup</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-            <script> 
-        $(function(){
-          $("#footer").load("footer.html"); 
-        });
-    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!-- Internal Style Starts Here -->
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-    body {
-      font-family: "Open Sans" , sans-serif;
-      background-color: #F4F5F7;
-    }
+    <title>Mentor Setup Page</title>
 
-    .container {
-      margin: 0px !important;
-    }
-    #ctn {
-      background-color: #D1F0F6;
-      color: #474747;
-      text-align: center;
-      width: 1440px;
-      height: 530px;    
-    }
-    h4 {
-      font-family: "Open Sans" , sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 40px;
-      line-height: 54px;
-      text-align: center;
-      color: #084482;
-    }
-    /*Footer style starts here*/
-            a {
-        color: #00AEFF;
-        text-decoration: none;
-        }
-        a:hover {
-        opacity: .9;
-        text-decoration: none;
-        }
-        footer {
-        background-color: #FAFAFA;
-        padding: 30px 50px;
-        width: 100%;
-        }
-        footer .footer-header {
-        width: 100%;
-        font-weight: bold;
-        }
-        footer .footer-header .hng-logo {
-        color: #00AEFF;
-        font-weight: 800;
-        font-size: 1.2em;
-        }
-        footer .footer-header p {
-        padding-left: 37px;
-        margin-top: -10px;
-        font-size: .9em;
-        }
-        footer .footer-content {
-        padding-left: 0;
-        }
-        footer .footer-content-item i {
-        display: inline-block;
-        border: 1px solid #00AEFF;
-        border-radius: 50%;
-        padding: 3px 4px;
-        margin-right: 5px;
-        font-size: .8em;
-        font-weight: lighter;
-        }
-        footer .contact p span {
-        font-weight: bold;
-        display: block;
-        }
-        footer .address p {
-        width: 40%;
-        }
-        footer .socialMedia i {
-        border: none;
-        -webkit-box-shadow: 1px 1px 1px #7e7c7c;
-                box-shadow: 1px 1px 1px #7e7c7c;
-        font-size: 1.2em;
-        padding: 10px;
-        margin-right: 25px;
-        }
-        footer .footer-footer {
-        color: #00AEFF;
-        opacity: .6;
-        font-size: bolder;
-        }
-        #cp-text {
-          color: #8898AA;
-        }
-    /*Style for header*/
-       nav{
-           display: flex;
-           justify-content: space-between;
-           margin-bottom: 10px;
-       }
-       .anch a{
-           margin: 0 10px;
-           /* position: absolute;
-           height: 22px;
-           left: 58.68%;
-           right: 38.19%;
-           top: calc(50% - 22px/2 - 1611px); */
-           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-           font-style: normal;
-           font-weight: normal;
-           font-size: 16px;
-           line-height: 22px;
-           color: #474747;
-           mix-blend-mode: normal;
-           opacity: 0.95;
-           text-decoration: none;
-       }
-       .anch a:hover {
-           background-color: #ddd;
-           color: black;
-       }
-       .header a.itembutton {
-           font-size: 14px;
-           line-height: 19px;
-           letter-spacing: 0.31px;
-           color: #FFFFFF;
-           background: #00AEFF;
-           padding: 4px 7px;
-           border-radius: 4px;
-       }
-       .logoImg {
-           display: flex;
-       }
-       .logoHeader{
-           margin: 2px 2px 1px 2px;
-       }
-       .logoPar{
-           margin: 1px 2px;
-           font-size: 12px;
-       }
-     .box1{
-     background-color: #D1F0F6;
-     fill: rgb(209, 240, 246);
-     position: relative;
-     max-width: 1440px;
-     height: 530px;
-     left: 0px;
-     top: 0px;  
-     text-align: center;
-     margin: 0px auto;
-     width: 100%;
+    <!-- Styles start here -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+      body {
+        font-family: "Open Sans" , sans-serif;
+        background-color: #F4F5F7;
       }
-     
-      .pagetitle{
-         
-     margin-top: 15%;
-     /* position: absolute;
-     width: 447px;
-     height: 54px;
-     left: 496px;
-     top: 278px; */
-     background: #D1F0F6;
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-     font-style: normal;
-     font-weight: 600;
-     font-size: 40px;
-     line-height: 54px;
-     text-align: center;
-     color: #084482;
-  }
-         
-  .pagetitletagline {
-    /*  position: absolute;
-     width: 612px;
-     height: 66px;
-     left: 414px;
-     top: 371px; */
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-     font-style: normal;
-     font-weight: normal;
-     font-size: 24px;
-     line-height: 33px;
-     text-align: center;
-     color: #474747;
-  }
-  .headerContainer {
-     background-color: #D1F0F6;
-     text-align: center;
-  }
-  .header {
-     text-align: center;
-     /* Added here */
-     max-width: 1000px;
-     width: 100%;
-     margin: 0 auto;
-     padding-top: 2%;
-  }
-  @media screen and (max-width: 710px) {
-     .anch a {
-         margin: 0px 2px;
-     }
-   }
-   @media screen and (max-width: 626px) {
-     nav {
-         display: flex;
-         flex-direction: column;
-         text-align: center;
-     }
-  }
-  /*Choose expetertise*/
-  .content{
-        background-color:#f4f5f7;
-        padding-left: 9%;
-    }
-    .formcontent{
-        background-color:rgba(255,255,255,0);
-    }
-    .inner{
-        background-color:#ffffff;
-    }
-    .inner1{
-        padding: 30px 0px;
-    }
-    .form-check label{
-        width:20%;
-        padding-left: 2% !important;
-    }
-    .form-control{
-        margin-bottom:10px;
-    }
-    .none{
-        display: none !important;
-    }
-    .attach{
-        display: block!important;
-    }
-    .attach img{
-        display: block!important;
-        margin-left: auto!important;
-        margin-right: auto!important;
-    }
-    .submitform{
+      #header-bg {
+        background-color: #D1F0F6;
+      }
+      #row-tab {
+        padding-top: 2%;
+      }
+      .nav-item {
+        color: #474747 !important;
+      }
+      #nav-btn {
+        color: #FFFFFF;
+        background: #00AEFF;
+        border-radius: 4px;
+      }
+      #page-title {
+        font-style: normal;
+        line-height: 54px;
+        text-align: center;
+        padding-top: 20%;
+      }
+      #main-title {
+        font-weight: 600;
+        font-size: 40px;
+        color: #084482;
+      }
+      #text-title-1 {
+        color: #474747;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        padding-top: 1%;
+      }
+      #text-title-2 {
+        color: #474747;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+      }
+      #area-container {
+        color: #474747;
+        padding-top: 5%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        padding-bottom: 3%;
+      }
+      #checkbox-container {
+        background-color: #FFFFFF;
+        padding-top: 3%;
+        padding-left: 2%;
+      }
+      #toggleText , #toggleText1 , #toggleText2 , #toggleText3 , #toggleText4 , #toggleText5 {
+        display: none;
+      }
+      /*New checkbox*/
+      /* The container */
+      .cont {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .icon.ion-ios-arrow-down {
-        float:right;
-        color:#00AEFF;
-    }
-    #align-exp {
-      align-content: center !important;
-      margin-right: 20%;
-      padding-right: 20%;
-    }
-    .form-check-label {
-      font-weight: lighter !important;
-    }
-        /*New checkbox*/
-    /* The container */
-.cont {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-/* Hide the browser's default checkbox */
-.cont input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+      /* Hide the browser's default checkbox */
+      .cont input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
 
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  padding-left: 2%;
-}
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }
 
-/* On mouse-over, add a grey background color */
-.cont:hover input ~ .checkmark {
-  background-color: #ccc;
-}
+      /* On mouse-over, add a grey background color */
+      .cont:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
 
-/* When the checkbox is checked, add a blue background */
-.cont input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
+      /* When the checkbox is checked, add a blue background */
+      .cont input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
 
-/* Show the checkmark when checked */
-.cont input:checked ~ .checkmark:after {
-  display: block;
-}
+      /* Show the checkmark when checked */
+      .cont input:checked ~ .checkmark:after {
+        display: block;
+      }
 
-/* Style the checkmark/indicator */
-.cont .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-/*New Checkbox end*/
-  /*New Responsive Navbar*/
-  .nav-item {
-                color: #000000 !important;
-                font-family: Open Sans , sans-serif !important;
-                font-weight: normal;
-                text-transform: capitalize;
-            }
-            .join {
-                border: 1px solid #00AEFF;
-                border-radius: 4%;
-                background-color: #00AEFF;
-            }
-            .navbar {
-                color: #474747;
-            }
-            header {
-                /* width: 1440px; */
-                height: 530px;
-                left: 0px;
-                top: 0px;
-                background: #D1F0F6;
-            }
-            .mb-4 {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 40px;
-                line-height: 54px;
-                text-align: center;
-                color: #084482;
-            }
-            .par {
-                margin-top: 130px;
-            }
-            .lead {
-                text-align: center;
-                font-family: Open Sans;
-                font-weight: normal;
-                margin-left: 250px;
-                margin-right: 250px;
-            }
-            @media (max-width: 990px) {
-                    .nav-item {
-                    color: #000000 !important;
-                    font-family: Open Sans;
-                    font-weight: normal;
-                    font-size: 15px;
-                    text-transform: capitalize;
-                }
-                .join {
-                    border: 1px solid #00AEFF;
-                    border-radius: 4%;
-                    background-color: #00AEFF;
-                }
-                .navbar {
-                    color: #474747;
-                }
-            
-                header {
-                    /* width: 1440px; */
-                    height: 530px;
-                    left: 0px;
-                    top: 0px;
-                    background: #D1F0F6;
-                }
-                .mb-4 {
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 30px;
-                    line-height: 40px;
-                    text-align: center;
-                    color: #084482;
-                }
-                .par {
-                    margin-top: 100px;
-                }
-                .lead {
-                    text-align: center;
-                    font-family: Open Sans;
-                    font-weight: normal;
-                    margin-left: 150px;
-                    margin-right: 150px;
-                }
-                .logo {
-                    width: 70%;
-                    height: auto;
-                }
-            
-            }
-            @media (max-width: 770px) {
-                    .nav-item {
-                    color: #000000 !important;
-                    font-family: Open Sans;
-                    font-weight: normal;
-                    font-size: 12px;
-                    text-transform: capitalize;
-                }
-                .join {
-                    border: 1px solid #00AEFF;
-                    border-radius: 4%;
-                    background-color: #00AEFF;
-                }
-                .navbar {
-                    color: #474747;
-                }
-            
-                header {
-                    height: 530px;
-                    left: 0px;
-                    top: 0px;
-                    background: #D1F0F6;
-                }
-                .mb-4 {
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 25px;
-                    text-align: center;
-                    color: #084482;
-                }
-                .par {
-                    margin-top: 100px;
-                }
-                .lead {
-                    text-align: center;
-                    font-family: Open Sans;
-                    font-weight: normal;
-                    font-size: 15px;
-                    margin-left: 70px;
-                    margin-right: 70px;
-                }
-                .logo {
-                    width: 50%;
-                    height: auto;
-                }
-            
-            }
-            @media (max-width: 412px) {
-                    .nav-item {
-                    color: #000000 !important;
-                    font-family: Open Sans;
-                    font-weight: bold;
-                    font-size: 10px;
-                    text-transform: capitalize;
-                }
-                .join {
-                    border: 1px solid #00AEFF;
-                    border-radius: 4%;
-                    background-color: #00AEFF;
-                }
-                #nav {
-                    background-color: #D1F0F6 !important;
-                    color: #474747 !important;
-                    font-weight: bold;
-                }
-
-                .navbar-toggler {
-                    border: none !important;
-                    outline: none !important;
-                }
-            
-                header {
-                    height: 530px;
-                    left: 0px;
-                    top: 0px;
-                    background: #D1F0F6;
-                }
-                .mb-4 {
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 25px;
-                    text-align: center;
-                    color: #084482;
-                }
-                .par {
-                    margin-top: 100px;
-                }
-                .lead {
-                    text-align: center;
-                    font-family: Open Sans;
-                    font-weight: normal;
-                    font-size: 15px;
-                    margin-left: 70px;
-                    margin-right: 70px;
-                }
-                .logo {
-                    width: 30%;
-                    height: auto;
-                }
-                .fa-lg {
-                    font-size: .7em;
-                    line-height: .5em;
-                    vertical-align: -10%;
-                    margin: -5px;
-                }
-            
-            }
-            .btn{
-                width: 100px;
-                font-size: 16px;
-                background-color: #00AEFF !important;
-                border-radius: 0;
-                color: #ffffff !important;
-                box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-            }
-            /*New Responsive navbar ends*/
-
-/*New Responsive code starts here"*/
-@media screen and (max-width: 970px){
-       .form-check-label{
-           width:40%;
-       }
-   }
-   @media screen and (max-width: 800px){
-       .form-check label{
-           width:40%;
-       }
-   }
-   @media screen and (max-width: 700px){
-       .form-check label{
-           width:40%;
-       }
-   }
-   @media screen and (max-width: 540px){
-       .form-check-label{
-           width:70%;
-       }
-   }
-   @media screen and (max-width: 400px){
-       .form-check-label{
-           width:80%;
-       }
-   }
-
-   
-  </style>
-</head>
-<body>
-    <div class="headerContainer">
-  <!--Header - navbar-->
-   <section class="box1">
-  
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-      <a class="navbar-brand" href="#">
-        <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">HNG6</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Mentors</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-          </li>z
-  
-          <button class="btn btn-primary">Join HNG</button>
-        </ul>
+      /* Style the checkmark/indicator */
+      .cont .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .expertise-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.04px;
+        color: #525F7F
+      }
+      .label-text {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.04px;
+        color: #525F7F;
+      }
+      #insert-img-block {
+        padding-top: 1%;
+        align-content: center;
+        text-align: center;
+      }
+      #input-form {
+        align-content: center;
+        text-align: center;
+      }
+      #file-input {
+        display: none;
+      }
+      #quicklink-text {
+        font-weight: 600;
+        font-size: 23px;
+        color: #00AEFF;
+        padding-top: -2%;
+      }
+      #footer-section {
+       background-color: #FAFAFA;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id = "header-bg">
+        <div class = "container">
+          <div class = "row" id = "row-tab">
+            <div class = "col">
+              <a href="index.html">
+                <img src="https://res.cloudinary.com/yutee/image/upload/v1570670418/brand-logo_awykcz.png" alt="HNGLogo">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div> <!-- LogoImg -->
+            <div class = "col"> 
+              <nav class = "nav nav-pills justify-content-end">
+                <a class = "nav-item nav-link" href="#">Home</a>
+                <a class = "nav-item nav-link" href="#">HNG6</a>
+                <a class = "nav-item nav-link" href="#">Mentors</a>
+                <a class = "nav-item nav-link" href="#">Contact</a>
+                <a class = "nav-item nav-link" href="#"><button class="btn btn-primary" id = "nav-btn">Join HNG</button></a>
+              </nav>
+            </div> <!-- NavColumn -->
+          </div> <!-- Row -->
+          <div class = "text-center" id = "page-title">
+               <div id = "main-title">Mentor Account Setup</div>
+               <div id = "text-title-1">Thanks for your interest in becoming a HNG mentor.</div>
+                <div id = "text-title-2"> Kindly fill out this form.</div>
+          </div> <!-- Page title -->
+        </div> <!--Container-->  
+      </div> <!-- HeaderBg -->
+    </div> <!-- WebPage -->
+    <div  class = "container">
+      <div class = "text-center" id = "area-container">Choose an area of expertise</div>
+      <div class = "justify-content-center" id = "checkbox-container">
+        <label class="cont form-check-label label-text">Frontend Development
+          <input type="checkbox" checked="checked">
+            <span class="checkmark"><i class="icon ion-ios-arrow-down"></i></span>
+            <span><button type="" onclick="toggleFun()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
+        </label>
+        <span id = "toggleText" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills: HTML, CSS, Javascript, Boostrap, JQuery</span>
+        <br>
+        <label class="cont form-check-label label-text">Backend Development
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span><button type="" onclick="toggleFun1()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
+        </label>
+        <span id = "toggleText1" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <br>
+        <label class="cont form-check-label label-text">Machine Learning
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span><button type="" onclick="toggleFun2()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
+        </label>
+        <span id = "toggleText2" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <br>
+        <label class="cont form-check-label label-text">UX/UI Design
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span><button type="" onclick="toggleFun3()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button></span> <!-- For Arrow -->
+        </label>
+        <span id = "toggleText3" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <br>
+        <label class="cont form-check-label label-text">Mobile Development
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span><button type="" onclick="toggleFun4()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
+        </label>
+        <span id = "toggleText4" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <br>
+        <label class="cont form-check-label label-text">Digital Marketing
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            <span><button type="" onclick="toggleFun5()" style="background-color: transparent; border-color: transparent;">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+                </button>
+            </span> <!-- For Arrow -->
+        </label>
+        <span id = "toggleText5" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+        <br>
+      </div> <!-- Checkbox -->
+    </div> <!-- Area of expertise -->
+    <div class = "container"> 
+      <div class="col-md-12 inner1 mt-5" id = "insert-img-block">
+        <label for="file-input" class="attach">
+        <img src="https://res.cloudinary.com/onamusia/image/upload/v1570664123/hng%20website/Group_96_zxm5gs.png">
+        </label>
+        <input class="none " id="file-input" type="file"/>
+        <p class="text-center">Click the image above to upload a profile photo</p>
+        <p class="text-center">JPG or PNG. Max size of 400k</p> <br>
       </div>
-    </nav>
-   <div>
-           <p class="pagetitle">
-               Mentor Account Set Up
-           </p>
-           <div class="pagetitletagline">
-               <div>Thanks for your interest in becoming a HNG mentor.</div>
-               <div>Kindly fill out this form.</div>
-           </div>
-   </div>
-   </section>
-  </div> 
-  <!-- Choose area of expertise -->
-  <div class = "container-fluid" id = "align-exp">
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 formcontent">
-                    <h3 class="text-center">Choose an area of expertise</h3>
-                    <div class="inner">
-                        <!-- <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="formCheck-1">
-                            <label class="form-check-label" for="formCheck-1" style="">Frontend Development
-                                <i class="icon ion-ios-arrow-down"></i>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="formCheck-1">
-                            <label class="form-check-label" for="formCheck-1">Backend Development
-                                <i class="icon ion-ios-arrow-down"></i>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="formCheck-1">
-                            <label class="form-check-label" for="formCheck-1">Machine Learning
-                                <i class="icon ion-ios-arrow-down"></i>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="formCheck-1">
-                            <label class="form-check-label" for="formCheck-1">UI/UX Design
-                                <i class="icon ion-ios-arrow-down"></i>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="formCheck-1">
-                            <label class="form-check-label" for="formCheck-1">Mobile Development
-                                <i class="icon ion-ios-arrow-down"></i>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="formCheck-1">
-                            <label class="form-check-label" for="formCheck-1">Digital Marketing
-                                <i class="icon ion-ios-arrow-down"></i>
-                            </label> -->
-                            <label class="cont form-check-label">Frontend Development
-                      <input type="checkbox" checked="checked">
-                      <span class="checkmark"></i></span>
-                      
-                    </label>
-                    <label class="cont form-check-label">Backend Development
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="cont form-check-label">Machine Learning
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="cont form-check-label">UX/UI Design
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="cont form-check-label">Mobile Development
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="cont form-check-label">Digital Marketing
-                      <input type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                        </div>
-                    </div>
-                    <div class="col-md-12 inner1">
-                        <label for="file-input" class="attach">
-                            <img src="https://res.cloudinary.com/onamusia/image/upload/v1570664123/hng%20website/Group_96_zxm5gs.png">
-                        </label>
-                        <input class="none" id="file-input" type="file"/>
-                        <p class="text-center">Click the image above to upload a profile photo</p>
-                        <p class="text-center">JPG or PNG. Max size of 400k</p> <br>
-                        <form>
-                            <input class="form-control" type="text" placeholder="Name">
-                            <input class="form-control" type="text" placeholder="Email" inputmode="email">
-                            <input class="form-control" type="text" placeholder="Phone Number" inputmode="tel">
-                            <input class="form-control" type="text" placeholder="What do you do?">
-                            <input class="form-control" type="url" placeholder="Link to your portfolio">
-                            <input class="form-control" type="url" placeholder="Link to your LinkedIn profile">
-                            <input class="form-control" type="url" placeholder="Link to your CV">
-                            <input class="form-control" type="text" placeholder="Why are interested in mentoring with HNG?">
-                            <input class="form-control" type="text" placeholder="What state are you currently located in?">
-                            <input class="form-control" type="text" placeholder="What is your current employment status?"> <br>
-                            <button class="btn btn-primary submitform" type="submit"> Submit</button>
-                        </form>
-                    </div>
-                </div>
+    </div> <!-- Image Insert block -->
+    <div class = "container">
+      <div class = "justify-content-center" id = "input-form">
+        <form>
+            <input class="form-control" type="text" placeholder="Name"> <br>
+            <input class="form-control" type="text" placeholder="Email" inputmode="email"> <br>
+            <input class="form-control" type="text" placeholder="Phone Number" inputmode="tel"> <br>
+            <input class="form-control" type="text" placeholder="What do you do?"> <br>
+            <input class="form-control" type="url" placeholder="Link to your portfolio"> <br>
+            <input class="form-control" type="url" placeholder="Link to your LinkedIn profile"> <br>
+            <input class="form-control" type="url" placeholder="Link to your CV"> <br>
+            <input class="form-control" type="text" placeholder="Why are interested in mentoring with HNG?"> <br>
+            <input class="form-control" type="text" placeholder="What state are you currently located in?"> <br>
+            <input class="form-control" type="text" placeholder="What is your current employment status?"> <br>
+            <button class="btn btn-primary submitform" type="submit"> Submit</button>
+        </form>
+      </div>
+    </div> <!-- Form input field -->
+    <br> <br> <br> <br> <br>
+    <div id = "footer-section">
+      <div class="container">
+        <!-- Footer -->
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+          <div class="container text-center text-md-left">
+            <a class="navbar-brand text-dark" href="#">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570670418/brand-logo_awykcz.png" alt="HNG Internship" class="logo">
+            </a>
+          <div class="row">
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+              <div class="font-weight-bold mb-4" id = "quicklink-text">Quick Links</div>
+              <ul class="list-unstyled">
+                <li>
+                  <p>
+                    <a style="color: #00AEFF;" href="#">Join HNG</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#">About HNG</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#">Become a Sponsor</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#">Signup as a mentor</a>
+                  </p>
+                </li>
+              </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <h5 class="font-weight-bold  mb-4">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <p>Phone: </p>
+              </li>
+              <li>
+                <p>+234 (0) 812 345 6789</p>
+              </li>
+              <li>
+                <p>Email:</p>
+                  <li>
+                      <p>interns@hng.tech</p>
+                    </li>
+                    
+              </li>
+              
+            </ul>
+  
+          </div>
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+              <h5 class="font-weight-bold  mb-4">Office Address</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <p>3 Birrel Avenue</p>
+                </li>
+                <li>
+                  <p>Sabo,Yaba,</p>
+                </li>
+                <li>
+                  <p>Lagos State</p>
+                </li>
+              </ul>
             </div>
-        </div>
-    </div>
-  </div>
-  <div  id = "footer">
-    <footer class="footer">
-          <section class="footer-header col-sm-12">
-              <img src="https://res.cloudinary.com/yutee/image/upload/v1570670418/brand-logo_awykcz.png">
-          </section>
-          <section class="footer-content col-sm-12">
-              <div class="footer-content-item col-sm-3">
-                  <h3><a href="#">Quick Links</a></h3>
-                  <p><a href="#"><i class="fa fa-chevron-right"></i>Join HNG</a></p>
-                  <p><a href="#"><i class="fa fa-chevron-right"></i>About HNG</a></p>
-                  <p><a href="#"><i class="fa fa-chevron-right"></i>Become a partner</a></p>
-                  <p><a href="#"><i class="fa fa-chevron-right"></i>Signup as a mentor</a></p>
-              </div>
-              <div class="footer-content-item col-sm-3 contact">
-                  <h3><a href="#">Contact Us</a></h3>
-                  <p><span>Phone: </span> +234 (0) 8123456789</p>
-                  <p><span>Email: </span> interns@hng.tech</p>
-              </div>
-              <div class="footer-content-item col-sm-3 address">
-                  <h3><a href="#">Office Address</a></h3>
-                  <p>Birrel Avenue, Sabo, Yaba, Lagos State</p>
-              </div>
-              <div class="footer-content-item col-sm-3 socialMedia">
-                  <h3><a href="#">Follow Us</a></h3>
-                  <p><a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-globe"></i></p></a>
-              </div>
-          </section>
-          <section class="footer-footer text-center">
-              <span id = "cp-text">&copy; 2019, HNG Internship. All rights reserved</span>
-          </section>
-      </footer>
-  </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+            <h5 class="font-weight-bold mb-4">Follow Us</h5>
+            <a href="https://twitter.com">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922278/TWITTERtw_icon_zthsdk.png" alt="Twitter Logo" class = "justify-content-between" style="height:20px;">
+            </a>
+            <a href="https://facebook.com">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922278/FACEBOOKfb_cfxqru.png" alt="Facebook Logo" class = "justify-content-between" style="height:20px;">
+            </a>
+            <a href="https://dribble.com">
+              <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/DRIBBBLEdr_ws61rj.png"  alt = "Dribble Logo" class = "justify-content-between" style="height:20px;">
+            </a>
+          </div>
+          </div>
+          </div>
+          <div class="footer-copyright text-center py-3" style="color: #8898AA;">© 2018 Copyright:
+            <span style="color: #8898AA;"> HNG Internship. All rights reserved.</span>
+          </div>
+        </footer>
+        <!-- Footer here -->
+      </div>
+    </div> <!-- Footer Container -->
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Toggle checkbox options script -->
+    <script>
+      function toggleFun() {
+        var x = document.getElementById("toggleText");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun1() {
+        var x = document.getElementById("toggleText1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun2() {
+        var x = document.getElementById("toggleText2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun3() {
+        var x = document.getElementById("toggleText3");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun4() {
+        var x = document.getElementById("toggleText4");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+      function toggleFun5() {
+        var x = document.getElementById("toggleText5");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
 </html>
