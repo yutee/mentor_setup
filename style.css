@@ -1,0 +1,262 @@
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    a {
+      text-decoration: none;
+    }
+      #nav {
+      background-color: #D1F0F6 !important;
+      color: #474747 !important;
+      font-weight: bold;
+     }
+     .navbar-toggler {
+       border: none !important;
+       outline: none !important;
+     }
+     .navbar-toggler-icon {
+      border-radius: none;
+      box-shadow: none;
+    }
+    .nav-item {
+      float: right;
+    }
+     header {
+      background-color: #D1F0F6 !important;
+     }
+     .pagetitle {
+       text-align: center;
+       padding-top: 150px;
+       color: #084482;
+     }
+     .pagetitletagline {
+       text-align: center;
+       padding-top: 15px;
+       padding-bottom: 60px;
+     }
+     .formcontent {
+       padding-top: 60px;
+     }
+     .headerContainer {
+     background-color: #D1F0F6 !important;
+     text-align: center;
+     }
+ .cont {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  padding-left: 2%;
+}
+/* On mouse-over, add a grey background color */
+.cont:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background */
+.cont input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.cont input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.cont .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.content{
+        background-color:#f4f5f7;
+        padding-left: 9%;
+        
+    }
+    .formcontent{
+        background-color:rgba(255,255,255,0);
+    }
+    .inner{
+        background-color:#ffffff;
+        
+    }
+    .inner1{
+        padding: 30px 0px;
+    }
+    .form-check label{
+        width:20%;
+        padding-left: 2% !important;
+    }
+    .form-control{
+        margin-bottom:10px;
+    }
+    .none{
+        display: none !important;
+    }
+    .attach{
+        display: block!important;
+    }
+    .attach img{
+        display: block!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .submitform{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .icon.ion-ios-arrow-down {
+        float:right;
+        color:#00AEFF;
+    }
+    #align-exp {
+      align-content: center !important;
+      margin-right: 20%;
+      padding-right: 20%;
+    }
+    .form-check-label {
+      font-weight: lighter !important;
+    }
+    footer {
+         text-align: left;
+         background: #F8F8F8;
+         box-sizing: border-box;
+     }
+     
+     .footer-brand {
+         margin-left: -2.2rem;
+     }
+     
+     #sections {
+         display: flex;
+         justify-content: space-evenly;
+         text-align: left;
+     }
+     
+     #bottom {
+         text-align: center;
+     }
+     
+     #section-one,
+     #section-two,
+     #section-three,
+     #section-four {
+         padding: 0 1rem;
+     }
+     footer h4 {
+         color: #3BB9FF;
+     }
+     
+     @media (min-width: 700px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .collapse {
+        display: flex;
+        justify-content:flex-end;
+      }
+      
+     #landing-page {
+         min-height: 55vh;
+     }
+      li {
+        padding: 0 1.5rem;
+      }
+      ul {
+        margin-right: 3rem;
+      }
+    }
+    
+  /*  .land {
+        bottom: 6rem;
+    }*/
+    @media (min-width: 1000px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      li {
+        padding: 0 1.5rem;
+      }
+      ul {
+        margin-right: 3rem;
+      }
+      .collapse {
+        display: flex;
+        justify-content:flex-end;
+      }
+   
+     
+     footer {
+         text-align: left;
+     }
+     
+     .footer-brand {
+         margin-left: -2.2rem;
+     }
+     
+     #sections {
+         display: flex;
+         justify-content: space-evenly;
+         text-align: left;
+         padding-top: 40px;
+     }
+     
+     #bottom {
+         text-align: center;
+         padding-top: 40px;
+         color: #8898AA;
+     }
+     
+     #section-one,
+     #section-two,
+     #section-three,
+     #section-four {
+         padding: 0 1rem;
+     }
+     #section-two p,
+     #section-three p {
+       color: #8898AA;
+     }
+     .footer-brand {
+       padding: 40px;
+       margin-left: 40px;
+     }
+    }
+     
+    
